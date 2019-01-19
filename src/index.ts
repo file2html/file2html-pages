@@ -28,7 +28,10 @@ export default class FictionBookReader extends file2html.Reader {
         const fileContent: Uint8Array = fileInfo.content;
 
         return readArchive(fileContent).then((archive: Archive) => {
-            const previewFile: ArchiveEntry|undefined = archive.file('preview.jpg') || archive.file('QuickLook/Thumbnail.jpg');
+            const previewFile: ArchiveEntry|undefined = (
+                archive.file('preview.jpg') ||
+                archive.file('QuickLook/Thumbnail.jpg')
+            );
 
             if (!previewFile) {
                 return Promise.reject(new Error(
