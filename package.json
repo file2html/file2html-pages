@@ -19,7 +19,9 @@
     "file2html-xml-tools": "git+https://github.com/file2html/file2html-xml-tools.git#v1.0.0"
   },
   "devDependencies": {
-    "file2html-dev-tools": "git+https://github.com/file2html/file2html-dev-tools.git#v1.0.0"
+    "@types/node": "7.0.39",
+    "file2html-dev-tools": "git+https://github.com/file2html/file2html-dev-tools.git#v1.0.0",
+    "typescript": "2.4.2"
   },
   "repository": {
     "type": "git",
